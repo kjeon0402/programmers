@@ -23,6 +23,7 @@ public class Quiz21 {
 				}
 			}
 		}
+		// 최종 list = [7, 7, 7, 1, 7] -> 77과 17이 각각 한자리 숫자씩 나누어졌다
 		
 		int answer = 0;
 		for(int i = 0; i < list.size(); i++) {
