@@ -4,6 +4,7 @@ public class Factorial {
 	// ex. 5! = 5 * 4 * 3 * 2 * 1 = 120
 	// 정수 n이 주어질 때 최대 팩토리얼 구하기
 	// ex. n = 130 => answer = 5
+	// n의 최대값은 10!(3,628,800)
 	public static void main(String[] args) {
 		int n = 7;
 		int answer = 0;
