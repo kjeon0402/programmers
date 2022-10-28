@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Quiz32 {
@@ -10,7 +9,6 @@ public class Quiz32 {
 		long answer = 0;
 		
 		String[] numbers = s.split("");					// 각각의 알파벳으로 자름
-		System.out.println(Arrays.toString(numbers));
 		
 		List<String> list = new ArrayList<String>();
 		String[] str = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
@@ -19,12 +17,10 @@ public class Quiz32 {
 		String string = "";
 		for(int i = 0; i < numbers.length; i++) {
 			string += numbers[i];						// 빈 문자열에 각각의 알파벳을 순서대로 넣으면서
-			System.out.println("string : " + string);
 			for(int j = 0; j < str.length; j++) {		// str배열과 비교해서
 				if(string.equals(str[j])) {				// string과 str배열의 요소중 일치하는 것이 있을 때
 					list.add(Long.toString(num[j]));	// list에 일치하는 해당 str배열의 요소의 인덱스 번호의 num배열의 요소를 저장하고
 					string = "";						// string을 비운다
-					System.out.println("string : " + string);
 				}
 			}
 		}
