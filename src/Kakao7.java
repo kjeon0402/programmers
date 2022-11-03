@@ -14,24 +14,27 @@ public class Kakao7 {
 		String s = "{{2},{2,1},{2,1,3},{2,1,3,4}}";
 		int[] answer = {};
 		
-		List<Integer> list = new ArrayList<Integer>();
 		s = s.substring(2, s.length());
 		s = s.substring(0, s.length() - 2).replace("},{", "-");
-		String[] str = s.split("-");
+		String[] str = s.split("-");								// str에 문자열이 아닌 튜플의 집합 배열로 저장
+		List<Integer> list = new ArrayList<Integer>();				// 튜플을 만들 list 선언
 		
+		// 나눠진 문자열(str)을 배열의 길이에 따라 정렬
 		Arrays.sort(str, new Comparator<String>() {
 			public int compare(String o1, String o2) {
 				return Integer.compare(o1.length(), o2.length());
 			}
 		});
 		
+		// 정렬했기 때문에 뒤로 갈수록 튜플의 집합 길이는 길어짐
+		// 뒤로 갈수록 새로운 숫자가 등장하는데 순서대로 넣어주면 된다
 		for(int i = 0; i < str.length; i++) {
 			String string = str[i];
-			String[] temp = string.split(",");
-			for(int j = 0; j < temp.length; j++) {
+			String[] temp = string.split(",");			// str의 요소를 ,를 기준으로 다시 쪼개고
+			for(int j = 0; j < temp.length; j++) {		// str의 요소 하나마다
 				int n = Integer.parseInt(temp[j]);
-				if(!list.contains(n)) {
-					list.add(n);
+				if(!list.contains(n)) {					// list에 포함되어 있지 않으면
+					list.add(n);						// list에 추가
 				}
 			}
 		}
