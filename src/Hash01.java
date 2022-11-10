@@ -21,7 +21,7 @@ public class Hash01 {
 		for(int i = 0; i < participant.length; i++) {
 			String par = participant[i];
 			map.put(par, map.getOrDefault(par, 0) + 1);	// 참석자 배열의 요소를 map에 저장하는 과정
-			// map.getOrDefault(A, B) : 맵의 키가 A인 것이 있으면 A의 value를, 없으면 0을 반환
+			// map.getOrDefault(A, B) : 맵의 키가 A인 것이 있으면 A의 value를, 없으면 B을 반환
 			// 동명이인의 경우, value의 카운트를 더 해주기 위해 활용
 		}
 		
