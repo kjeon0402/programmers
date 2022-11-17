@@ -14,7 +14,7 @@ public class Quiz46 {
 		
 		while(!s.equals("1")) {							// s가 문자열 "1"이 아닌동안 반복해라
 			for(int i = 0; i < s.length(); i++) {
-				if(s.charAt(i) == '0') {				// s의 하나가 0이면
+				if(s.charAt(i) == '0') {				// s의 하나가 0일 때마다
 					answer[1]++;						// answer[1](0의 갯수)++ 해라
 				}
 			}
